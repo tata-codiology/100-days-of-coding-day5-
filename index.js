@@ -1,26 +1,28 @@
 "use strict";
-//DAY FOUR !!!!
-//Quesition 10
-//adding comments:choose two of the program you've written,and add at least add one comment to each.if the 
-//program are straightforward at this point,just add your name and the current date at the top.write one sentence
-//discribing what each program does.
-//tabsheera 15/4/24
-//this code prints personal message
-let Name = "tabsheera";
-console.log(`hello, ${Name} would you like to learn some typescript today?`);
-//QUESITION 11
-//names:store the names of a few of your friends in an array called names. print each person's name by 
-//accessing each element in the list, one at a time
-let Names1 = ["faiza", "irma", "maha"];
-for (let i = 0; i < Names1.length; i++) {
-    console.log(Names1[i]);
-}
-;
-//QUESITION 12
-//greeting:use the array from ex:11. instead of just printing each person's name,print a message to them.
-//the message should be the same for eaxh person,nut personalized with their names
-let Names = ["faiza", "irma", "maha"];
-for (let name of Names) {
-    console.log(`hello ${Names},would you guys like to learn some typescript today?`);
-}
-;
+//DAY FIVE !!!!
+/*Quesition 13:your own array:think of your favourite mode of transportation, sucha as motorcylce or a car,
+and make list that stores several examples. use your list to print a series of statements about these items,
+such as "i would like to own a honda motorcycle".*/
+let transport = ["Audi A5", "Toyota Land Cruiser"];
+transport.forEach(transport => {
+    console.log(`i would like to own ${transport}`);
+});
+/*Question 14:Guest list: if you cloud invite anyone,living or deceased, to dinner, who would you invite?
+ make a list that includes at least 3 people would you like to invite to dinner.
+ then use your list to print a message to each person, inviting them to dinner */
+let guests = ["faiza", "maha", "humera"];
+guests.forEach(guests => {
+    console.log(`${guests} would you like to have dinner with me?`);
+});
+/*Question 15:Changing guests list: one of your guest cant make it to dinner, so you need to send out new set
+of invitations with a replacement guest*/
+//unale to attend guest
+let unableTOattend = "humera";
+console.log(`${unableTOattend} cant make it to dinner`);
+//replace guest
+let newGuest = "momal";
+guests[guests.indexOf(unableTOattend)] = newGuest;
+//new invitation
+guests.forEach(guests => {
+    console.log(`${guests} would you like to join us to dinner?`);
+});
